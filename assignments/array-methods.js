@@ -97,11 +97,11 @@ console.log(lostItem)
 // The event director wants to send a special gift to everyone that donated more than 50, can you filter out a list of those runners information?
 const filteredDonations = runners.filter((item) => {
   return item.donation > 50
-})
+});
 console.log(filteredDonations)
 // Problem 3
 // The Marketing department wants to list all of the companies that sponsored runners on our website, can you output just a list of company names?
 const companyNames = runners.map((item) => {
   return item.company_name
-})
+});
 console.log(companyNames)
