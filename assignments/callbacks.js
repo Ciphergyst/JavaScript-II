@@ -43,20 +43,20 @@ last(items,function(first){
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-cb(x + Y);
+return cb(x + y);
 }
-sumNums(7,7, function(first){
- console.log(first);
+sumNums(7, 7, function(x){
+ console.log(x);
 });
 
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
- cb(x * y);
+ return cb(x * y);
 
 }
-multiplyNums(7,7, function(first){
-  console.log(first)
+multiplyNums(7,7, function (z){
+  console.log(z)
 });
 
 function contains(item, list, cb) {
@@ -76,4 +76,13 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  this.scrape = function (a) {
+    for(let i = 0; i <= a.length; i++) {
+      for(let j = i; j <= a.length; j++) {
+        if(i != j && a[i]) {
+          return true;
+        }
+      }
+    }
+  }
 }
