@@ -68,21 +68,14 @@ function contains(item, list, cb) {
     }
   }
   return cb(false);
-}
+};
 
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
+const uniqueItems = new Set(items);
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-  this.scrape = function (a) {
-    for(let i = 0; i <= a.length; i++) {
-      for(let j = i; j <= a.length; j++) {
-        if(i != j && a[i]) {
-          return true;
-        }
-      }
-    }
-  }
-}
+Array.from(new Set(array));
+
+console.log(uniqueItems)
