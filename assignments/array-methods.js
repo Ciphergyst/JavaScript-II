@@ -82,7 +82,7 @@ console.log(largeShirts);
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = runners.reduce((donTally, item) => {
-  return donTally + item.donation
+  return donTally + item.donation;
 }, 0);
 
 console.log(ticketPriceTotal);
@@ -93,18 +93,18 @@ console.log(ticketPriceTotal);
 // Problem 1
 // The runner that works for Photospace lost an item during the run, can you get their details so the item can be returned?
 const lostItem = runners.find((item) => {
-  return item.company_name === 'Photospace'
+  return item.company_name === 'Photospace';
 });
-console.log(lostItem)
+console.log(lostItem);
 // Problem 2
 // The event director wants to send a special gift to everyone that donated more than 50, can you filter out a list of those runners information?
 const filteredDonations = runners.filter((item) => {
-  return item.donation > 50
+  return item.donation > 50;
 });
-console.log(filteredDonations)
+console.log(filteredDonations);
 // Problem 3
 // The Marketing department wants to list all of the companies that sponsored runners on our website, can you output just a list of company names?
 const companyNames = runners.map((item) => {
-  return item.company_name
+  return item.company_name;
 });
-console.log(companyNames)
+console.log(companyNames);
