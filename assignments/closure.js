@@ -19,7 +19,7 @@ const counter = (closure = 0) => {
   return function counter(){
     val += 1;
     console.log(val);
-  }
+  };
 };
  const newCounter = counter();
 newCounter(); // 1

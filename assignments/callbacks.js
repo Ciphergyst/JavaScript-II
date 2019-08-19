@@ -29,17 +29,19 @@ function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
 cb(arr.length);
 }
-getLength(items, function(first){
- console.log(first);
+getLength(items, function(length){
+ console.log(length);
 });
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
 cb(arr[arr.length-1]);
 }
-last(items,function(first){
- console.log(first);
+last(items,function(last){
+ console.log(last);
 });
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
@@ -56,26 +58,27 @@ function multiplyNums(x, y, cb) {
 
 }
 multiplyNums(7,7, function (z){
-  console.log(z)
+ console.log(z);
 });
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  for(let i = 0; i < list.length; i++){
-    if (list[i] === item){
-      return cb(true);
-    }
+  if(list.includes(item)){
+    return cb(true);
   }
   return cb(false);
-};
+}
+contains('Notebook', function(success)){
+
+}
 
 /* STRETCH PROBLEM */
 
-const uniqueItems = new Set(items);
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-Array.from(new Set(array));
-
-console.log(uniqueItems)
+// const uniqueItems = new Set(items);
+//   // removeDuplicates removes all duplicate values from the given array.
+//   // Pass the duplicate free array to the callback function.
+//   // Do not mutate the original array.
+// Array.from(new Set(Array));
+//
+// console.log(uniqueItems);
